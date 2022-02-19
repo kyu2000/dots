@@ -1,10 +1,13 @@
 " Plugins
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
-Plug 'kaicataldo/material.vim', { 'branch': 'main' }
-Plug 'vim-airline/vim-airline'
+    Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+    Plug 'vim-airline/vim-airline'
+
+    Plug 'preservim/nerdtree'
 
 call plug#end()
+" :PlugInstall to install plugins
 
 " Colors
 syntax enable
@@ -52,8 +55,6 @@ set hlsearch
 set ignorecase
 set smartcase
 
-" Mouse
-
 " Airline
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
@@ -63,8 +64,12 @@ endif
 " let g:airline_symbols.colnr = ' '
 let g:airline_theme = 'material'
 
+" NERDTree
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
 " VIMRC
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC <bar> :doautocmd BufRead<CR>
-set mouse=a
-
