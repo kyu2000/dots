@@ -23,6 +23,7 @@ set tabstop=4
 set softtabstop=4
 set expandtab
 set autoindent
+set backspace=indent,eol,start
 
 " File Find
 set path+=**
@@ -36,10 +37,10 @@ set number
 set relativenumber
 set modelines=1
 set showcmd
-set cursorline
-set showmatch
-set scrolloff=10 
 set ruler
+set cursorline
+set scrolloff=10
+
 " set cmdheight=2
 " set signcolumn=yes
 " set updatetime=50
@@ -51,15 +52,19 @@ set hlsearch
 set ignorecase
 set smartcase
 
+" Mouse
+
 " Airline
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 
-let g:airline_symbols.colnr = ' '
+" let g:airline_symbols.colnr = ' '
 let g:airline_theme = 'material'
 
 " VIMRC
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC <bar> :doautocmd BufRead<CR>
+set mouse=a
+
