@@ -1,0 +1,18 @@
+export ZSH="$HOME/.oh-my-zsh"
+
+ZSH_THEME="agnoster"
+
+plugins=(
+    aliases
+    bazel
+    git
+    history
+    mvn
+    ripgrep
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+)
+
+HIST_STAMPS="yyyy-mm-dd"
+
+source $ZSH/oh-my-zsh.sh
