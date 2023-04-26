@@ -28,3 +28,16 @@ selection:
   save_to_clipboard: false
 
 live_config_reload: true
+
+key_bindings:
+  - { key: T,              mods: Command,                    chars: "\x02c"   }
+  - { key: Key0,           mods: Command,                    chars: "\x020"   }
+  - { key: Key1,           mods: Command,                    chars: "\x021"   }
+  - { key: Key2,           mods: Command,                    chars: "\x022"   }
+  - { key: Key3,           mods: Command,                    chars: "\x023"   }
+  - { key: Key4,           mods: Command,                    chars: "\x024"   }
+  - { key: Key5,           mods: Command,                    chars: "\x025"   }
+  - { key: Key6,           mods: Command,                    chars: "\x026"   }
+  - { key: Key7,           mods: Command,                    chars: "\x027"   }
+  - { key: Key8,           mods: Command,                    chars: "\x028"   }
+  - { key: Key9,           mods: Command,                    chars: "\x029"   }
