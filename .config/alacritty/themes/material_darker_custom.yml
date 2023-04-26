@@ -6,7 +6,7 @@ colors:
   normal:
     white:      '#ffffff'
     black:      '#323232'
-    red:        '#f07178'
+    red:        '#ff5370'
     yellow:     '#ffcb6b'
     green:      '#c3e88d'
     cyan:       '#89ddff'
