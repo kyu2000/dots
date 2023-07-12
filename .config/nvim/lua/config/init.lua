@@ -1,0 +1,5 @@
+require("config.options")
+require("config.ftoptions")
+require("config.colorscheme")
+require("config.lsp")
+require("config.keymaps")
