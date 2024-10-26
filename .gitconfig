@@ -1,0 +1,24 @@
+[user]
+    email = kenvinyu2000@gmail.com
+    name = Kenvin Yu
+
+[pull]
+    rebase = true                   # Rebase branches on top of fetched branch, instead of merge
+
+[push]
+    default = simple                # When no refspec given, push current branch to same name on remote
+
+[branch]
+    autoSetupMerge = always         # New branch has automatic tracking set up for either local or remote-tracking branch
+    autoSetupRebase = always        # New branch tracking another branch is set up to rebase instead of merge on pull
+
+[alias]
+    s = status
+    b = branch
+    co = checkout
+    cb = checkout -b
+    pr = pull --rebase
+    c = commit
+    rba = rebase --abort
+    rbc = rebase --continue
+
