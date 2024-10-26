@@ -45,7 +45,12 @@ zinit wait lucid from"gh-r" as"null" for \
     atpull"%atclone" \
     sbin"ripgrep*/rg -> rg" \
     completions \
-        @BurntSushi/ripgrep
+        @BurntSushi/ripgrep \
+    atclone"delta*/delta --generate-completion zsh > _delta" \
+    atpull"%atclone" \
+    sbin"delta*/delta -> delta" \
+    completions \
+        @dandavison/delta
 
 # Plugins
 zinit wait lucid for \
