@@ -10,15 +10,16 @@ source "${ZINIT_HOME}/zinit.zsh"
 zinit light zdharma-continuum/zinit-annex-bin-gem-node
 zinit light zdharma-continuum/zinit-annex-patch-dl
 
-# Starship prompt
+# Prompt
 zinit for \
     lucid \
     from"gh-r" \
-    as"program" \
-    atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
+    cp"posh-* -> oh-my-posh" \
+    atclone"./oh-my-posh init zsh --config ~/.config/omp.toml > init.zsh; ./oh-my-posh completion zsh > _oh_my_posh" \
     atpull"%atclone" \
     src"init.zsh" \
-        @starship/starship
+    sbin"oh-my-posh" \
+      @jandedobbeleer/oh-my-posh
 
 # Programs
 zinit wait lucid from"gh-r" as"null" for \
