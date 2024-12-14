@@ -1,25 +1,44 @@
 return {
-    {
-        "neovim/nvim-lspconfig",
-        dependencies = {
-            "williamboman/mason.nvim",
-            {
-                "williamboman/mason-lspconfig.nvim",
-                opts = {
-                    ensure_installed = {
-                        "jdtls",
-                        "lua_ls",
-                        "jedi_language_server",
-                    },
-                },
-            },
-        },
+  {
+    "williamboman/mason.nvim",
+    lazy = true,
+    opts = {},
+  },
+  {
+    "williamboman/mason-lspconfig.nvim",
+    lazy = true,
+    dependencies = {
+      "mason.nvim",
     },
-    "hrsh7th/cmp-nvim-lsp",
-    "hrsh7th/cmp-buffer",
-    "hrsh7th/cmp-path",
-    "hrsh7th/cmp-cmdline",
-    "hrsh7th/nvim-cmp",
-    "hrsh7th/cmp-vsnip",
-    "hrsh7th/vim-vsnip",
+    opts = {
+      ensure_installed = {
+        "lua_ls",
+        "taplo",
+      },
+    },
+  },
+  {
+    "neovim/nvim-lspconfig",
+    dependencies = {
+      "mason-lspconfig.nvim",
+    },
+    event = "VeryLazy",
+    config = function()
+      local capabilities = require("cmp_nvim_lsp").default_capabilities()
+      require("lspconfig").lua_ls.setup({
+        capabilities = capabilities,
+      })
+      require("lspconfig").taplo.setup({
+        capabilities = capabilities,
+      })
+    end,
+  },
 }
+
+-- keybindings:
+-- use on lsp attach to map keys after language server attaches to the current buffer
+-- gd -> telescope builtin lsp definitions
+-- gD -> vim lsp buf declarations
+-- gr -> telescope builtin lsp references
+-- gi -> telescope builtin lsp implementations
+-- K -> vim lsp buf hover

@@ -11,13 +11,14 @@ vim.opt.cmdheight = 2                           -- height of cmds section
 vim.opt.signcolumn = "yes"                      -- always show sign column, otherwise would shift text each line
 vim.opt.shortmess:append({ c = true })
 vim.opt.showmode = false
+vim.opt.laststatus = 3                          -- global statusline
 
 -- Tabs and Spaces
-vim.opt.shiftwidth = 4
+vim.opt.shiftwidth = 2
 vim.opt.shiftround = true
 vim.opt.smartindent = true
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
 vim.opt.expandtab = true
 vim.opt.autoindent = true
 vim.opt.backspace = "indent,eol,start"
@@ -32,3 +33,4 @@ vim.opt.grepprg = "rg --vimgrep"
 
 -- Misc
 vim.opt.spelllang = { "en" }
+
