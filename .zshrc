@@ -49,6 +49,12 @@ zinit wait lucid from"gh-r" as"null" for \
     sbin"ripgrep*/rg -> rg" \
     completions \
         @BurntSushi/ripgrep \
+    reset \
+    mv"fd*/**/_fd -> _fd" \
+    cp"fd*/**/fd.1 -> $ZINIT[MAN_DIR]/man1/fd.1" \
+    sbin"fd*/fd -> fd" \
+    completions \
+        @sharkdp/fd \
     atclone"delta*/delta --generate-completion zsh > _delta" \
     atpull"%atclone" \
     sbin"delta*/delta -> delta" \
