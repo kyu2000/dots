@@ -60,7 +60,12 @@ zinit wait lucid from"gh-r" as"null" id-as for \
     atpull"%atclone" \
     sbin"delta*/delta -> delta" \
     completions \
-        @dandavison/delta
+        @dandavison/delta \
+    cp"tmux*/tmux.1 -> $ZINIT[MAN_DIR]/man1/tmux.1" \
+    atclone"tmux*/configure --prefix=$ZINIT[PLUGINS_DIR]/tmux --quiet && make --quiet && PREFIX=$ZINIT[PLUGINS_DIR]/tmux make install" \
+    atpull"%atclone" \
+    sbin"tmux "\
+      @tmux/tmux
 
 # Plugins
 zinit wait lucid for \
