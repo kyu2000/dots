@@ -6,6 +6,8 @@ if [ ! -d $ZINIT_HOME ]; then
 fi
 source "${ZINIT_HOME}/zinit.zsh"
 
+mkdir -p $ZPFX/bin
+
 # Zinit extensions
 zinit light zdharma-continuum/zinit-annex-bin-gem-node
 zinit light zdharma-continuum/zinit-annex-patch-dl
