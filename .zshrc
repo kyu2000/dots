@@ -16,6 +16,7 @@ zinit light zdharma-continuum/zinit-annex-patch-dl
 zinit for \
     lucid \
     from"gh-r" \
+    id-as \
     cp"posh-* -> oh-my-posh" \
     atclone"./oh-my-posh init zsh --config ~/.config/omp.toml > init.zsh; ./oh-my-posh completion zsh > _oh_my_posh" \
     atpull"%atclone" \
@@ -24,7 +25,7 @@ zinit for \
       @jandedobbeleer/oh-my-posh
 
 # Programs
-zinit wait lucid from"gh-r" as"null" for \
+zinit wait lucid from"gh-r" as"null" id-as for \
     dl"https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.zsh -> _fzf" \
     dl"https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.zsh -> key-bindings.zsh" \
     dl"https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/fzf-tmux.1 -> $ZINIT[MAN_DIR]/man1/fzf-tmux.1" \
