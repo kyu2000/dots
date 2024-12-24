@@ -63,10 +63,13 @@ zinit wait lucid from"gh-r" as"null" for \
 
 # Plugins
 zinit wait lucid for \
+    depth"1" \
     atinit"ZINIT[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay;" \
         zdharma-continuum/fast-syntax-highlighting \
+    depth"1" \
     atload"_zsh_autosuggest_start;" \
         zsh-users/zsh-autosuggestions \
+    depth"1" \
     blockf atpull"zinit creinstall -q ." \
         zsh-users/zsh-completions \
     OMZP::aliases \
