@@ -28,6 +28,7 @@ require("lazy").setup({
   },
   install = {
     colorscheme = {
+      "catppuccin-macchiato",
       "default",
     },
   },
