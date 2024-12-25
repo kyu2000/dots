@@ -23,6 +23,7 @@ return {
       require("mason").setup()
       require("mason-lspconfig").setup()
 
+      local capabilities = require('cmp_nvim_lsp').default_capabilities()
       local on_attach = function(client, bufnr)
         vim.api.nvim_set_option_value('omnifunc', 'v:lua.vim.lsp.omnifunc', { buf = bufnr })
         local function map(mode, lhs, rhs, desc)
@@ -39,9 +40,11 @@ return {
       end
 
       require("lspconfig").lua_ls.setup({
+        capabilities = capabilities,
         on_attach = on_attach,
       })
       require("lspconfig").taplo.setup({
+        capabilities = capabilities,
         on_attach = on_attach,
       })
     end,
