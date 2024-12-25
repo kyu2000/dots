@@ -13,6 +13,11 @@ return {
           alt_background = false,
         },
         gitsigns = true,
+        indent_blankline = {
+          enabled = true,
+          scope_color = "text",
+          colored_indent_levels = false,
+        },
         neotree = true,
         noice = true,
       },
