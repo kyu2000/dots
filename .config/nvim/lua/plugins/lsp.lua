@@ -23,7 +23,7 @@ return {
       require("mason").setup()
       require("mason-lspconfig").setup()
 
-      local capabilities = require('cmp_nvim_lsp').default_capabilities()
+      local capabilities = require('blink.cmp').get_lsp_capabilities()
       local on_attach = function(client, bufnr)
         vim.api.nvim_set_option_value('omnifunc', 'v:lua.vim.lsp.omnifunc', { buf = bufnr })
         local function map(mode, lhs, rhs, desc)

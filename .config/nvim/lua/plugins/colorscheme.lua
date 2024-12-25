@@ -12,7 +12,7 @@ return {
           dim_context = false,
           alt_background = false,
         },
-        cmp = true,
+        blink_cmp = true,
         gitsigns = true,
         indent_blankline = {
           enabled = true,
