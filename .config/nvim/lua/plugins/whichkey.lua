@@ -5,6 +5,7 @@ return {
     opts = {
       spec = {
         mode = { "n", "v" },
+        { "<leader>f",  group = "file/find" },
         { "[",          group = "prev" },
         { "]",          group = "next" },
       },
