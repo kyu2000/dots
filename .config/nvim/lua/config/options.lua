@@ -11,6 +11,7 @@ vim.opt.cmdheight = 2                  -- height of cmds section
 vim.opt.signcolumn = "yes"             -- always show sign column, otherwise would shift text on each line
 vim.opt.shortmess:append({ c = true }) -- silence give search messages e.g. Match 1 of 2
 vim.opt.showmode = true                -- silence mode messages
+vim.opt.laststatus = 3                 -- global statusline
 
 -- Tabs and Spaces
 vim.opt.smartindent = true -- autoindent when starting new line
