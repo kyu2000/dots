@@ -9,6 +9,7 @@ return {
         { "<leader>g",  group = "git" },
         { "<leader>gh", group = "hunks" },
         { "<leader>n",  group = "noice" },
+        { "<leader>q",  group = "quit/session" },
         { "[",          group = "prev" },
         { "]",          group = "next" },
       },
