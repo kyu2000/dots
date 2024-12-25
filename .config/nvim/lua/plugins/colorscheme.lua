@@ -6,6 +6,12 @@ return {
     priority = 1000,
     opts = {
       integrations = {
+        barbecue = {
+          dim_dirname = true,
+          bold_basename = true,
+          dim_context = false,
+          alt_background = false,
+        },
       },
     },
     config = function(_, opts)
