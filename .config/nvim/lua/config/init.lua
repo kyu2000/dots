@@ -1,5 +1,0 @@
-require("config.autocmds")
-require("config.options")
-require("config.colorscheme")
-require("config.lsp")
-require("config.keymaps")
