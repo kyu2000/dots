@@ -6,6 +6,7 @@ return {
       spec = {
         mode = { "n", "v" },
         { "<leader>f",  group = "file/find" },
+        { "<leader>n",  group = "noice" },
         { "[",          group = "prev" },
         { "]",          group = "next" },
       },

@@ -12,6 +12,7 @@ return {
           dim_context = false,
           alt_background = false,
         },
+        noice = true,
       },
     },
     config = function(_, opts)
