@@ -10,6 +10,7 @@ return {
         { "<leader>gh", group = "hunks" },
         { "<leader>n",  group = "noice" },
         { "<leader>q",  group = "quit/session" },
+        { "<leader>u",  group = "setting toggles" },
         { "[",          group = "prev" },
         { "]",          group = "next" },
       },
