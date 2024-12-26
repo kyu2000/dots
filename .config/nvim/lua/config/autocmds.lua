@@ -4,6 +4,7 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     local buf = event.buf
     vim.bo[buf].textwidth = 72
     vim.wo.colorcolumn = "+1"
+    vim.wo.spell = true
   end,
 })
 
