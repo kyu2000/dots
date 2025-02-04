@@ -1,6 +1,6 @@
 return {
   {
-    "freddiehaddad/feline.nvim",
+    "famiu/feline.nvim",
     event = "VeryLazy",
     opts = function(_, opts)
       local ctp_feline = require("catppuccin.groups.integrations.feline")
