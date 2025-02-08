@@ -32,7 +32,10 @@ require("lazy").setup({
       "default",
     },
   },
-  checker = { enabled = true },
+  checker = { 
+    enabled = true,
+    concurrency = 1,
+  },
   rocks = {
     enabled = false,
     hererocks = false,
