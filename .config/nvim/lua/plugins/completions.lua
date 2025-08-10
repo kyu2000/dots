@@ -1,8 +1,7 @@
 return {
   {
     "saghen/blink.cmp",
-    version = "v0.*",
-    lazy = true,
+    version = "1.*",
     opts = {
       keymap = {
         preset = "none",
