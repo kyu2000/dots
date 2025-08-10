@@ -40,6 +40,7 @@ zinit wait lucid from"gh-r" as"null" id-as for \
     src"key-bindings.zsh"\
     completions \
         @junegunn/fzf \
+    bpick"*linux*.tar.gz" \
     cp"nvim*/**/nvim.1 -> $ZINIT[MAN_DIR]/man1/nvim.1" \
     sbin"nvim*/bin/nvim -> nvim" \
     atload"alias vim=nvim; export VISUAL=nvim; export EDITOR=nvim" \
