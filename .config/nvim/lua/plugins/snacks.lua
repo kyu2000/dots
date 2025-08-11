@@ -5,6 +5,15 @@ return {
     lazy = false,
     opts = {
       dashboard = { enabled = true },
+      indent = {
+        enabled = true,
+        indent = {
+          char = "▏",
+        },
+        scope = {
+          enabled = false,
+        },
+      },
     },
     init = function()
       vim.api.nvim_create_autocmd("User", {
@@ -14,7 +23,7 @@ return {
           require("snacks").toggle.option("wrap", { name = "Wrap" }):map("<leader>uw")
           require("snacks").toggle.line_number():map("<leader>ul")
           require("snacks").toggle.option("relativenumber", { name = "Relative Number" }):map("<leader>uL")
-        end
+        end,
       })
     end,
   },
