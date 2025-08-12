@@ -15,7 +15,59 @@ return {
           enabled = false,
         },
       },
-      picker = { enabled = true },
+      picker = {
+        enabled = true,
+        sources = {
+          explorer = {
+            win = {
+              list = {
+                keys = {
+                  ["Y"] = "copy_path",
+                },
+              },
+            },
+            actions = {
+              copy_path = function(_, item)
+                local modify = vim.fn.fnamemodify
+                local filepath = item.file
+                local filename = modify(filepath, ":t")
+                local values = {
+                  modify(filepath, ":."),
+                  filepath,
+                  filename,
+                  modify(filename, ":r"),
+                  modify(filename, ":e"),
+                }
+                local items = {
+                  "Path relative to CWD: " .. values[1],
+                  "Absolute path: " .. values[2],
+                  "Filename: " .. values[3],
+                }
+                if vim.fn.isdirectory(filepath) == 0 then
+                  vim.list_extend(items, {
+                    "Filename without extension: " .. values[4],
+                    "Extension of the filename: " .. values[5],
+                  })
+                end
+                vim.ui.select(items, { prompt = "Choose to copy to clipboard:" }, function(choice, i)
+                  if not choice then
+                    vim.notify("Selection cancelled")
+                    return
+                  end
+                  if not i then
+                    vim.notify("Invalid selection")
+                    return
+                  end
+                  local result = values[i]
+                  vim.fn.setreg('"', result) -- Neovim unnamed register
+                  vim.fn.setreg("+", result) -- System clipboard
+                  vim.notify("Copied: " .. result)
+                end)
+              end,
+            },
+          },
+        },
+      },
       words = { enabled = true },
     },
     keys = {
@@ -58,7 +110,7 @@ return {
       {
         "<leader>fd",
         function()
-          Snacks.picker.files({ cwd = vim.fn.expand("%:p:h")})
+          Snacks.picker.files({ cwd = vim.fn.expand("%:p:h") })
         end,
         desc = "Find Files",
       },
@@ -294,7 +346,7 @@ return {
       {
         "gd",
         function()
-          Snacks.picker.lsp_definitions({focus = "list"})
+          Snacks.picker.lsp_definitions({ focus = "list" })
         end,
         desc = "Goto Definition",
       },
@@ -317,7 +369,7 @@ return {
       {
         "gi",
         function()
-          Snacks.picker.lsp_implementations({focus = "list"})
+          Snacks.picker.lsp_implementations({ focus = "list" })
         end,
         desc = "Goto Implementation",
       },
