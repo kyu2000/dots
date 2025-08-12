@@ -5,6 +5,7 @@ return {
     lazy = false,
     opts = {
       dashboard = { enabled = true },
+      explorer = { enabled = true },
       indent = {
         enabled = true,
         indent = {
@@ -38,6 +39,13 @@ return {
           Snacks.picker.command_history()
         end,
         desc = "Command History",
+      },
+      {
+        "<leader>e",
+        function()
+          Snacks.explorer()
+        end,
+        desc = "File Explorer",
       },
       -- find
       {
