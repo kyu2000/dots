@@ -71,6 +71,14 @@ crust = "#181926"
     [blocks.segments.properties]
       fetch_status = true
 
+  [[blocks.segments]]
+    type = 'python'
+    style = 'powerline'
+    powerline_symbol = ''
+    foreground = 'p:surface1'
+    background = 'p:teal'
+    template = '  {{ .Full }} '
+
 [[blocks]]
   type = 'rprompt'
 
