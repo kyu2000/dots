@@ -17,6 +17,11 @@ return {
       },
       picker = {
         enabled = true,
+        formatters = {
+          file = {
+            truncate = 100,
+          },
+        },
         sources = {
           explorer = {
             win = {
