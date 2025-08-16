@@ -74,6 +74,9 @@ return {
           },
         },
       },
+      scratch = {
+        ft = "markdown"
+      },
       words = { enabled = true },
     },
     keys = {
@@ -406,6 +409,13 @@ return {
           Snacks.picker.lsp_workspace_symbols()
         end,
         desc = "LSP Workspace Symbols",
+      },
+      {
+        "<leader>.",
+        function()
+          Snacks.scratch()
+        end,
+        desc = "Toggle Scratch Buffer",
       },
       {
         "]]",
