@@ -66,7 +66,9 @@ zinit wait lucid from"gh-r" as"null" id-as for \
     atclone"tmux*/configure --prefix=$ZINIT[PLUGINS_DIR]/tmux --quiet && make --quiet && PREFIX=$ZINIT[PLUGINS_DIR]/tmux make install" \
     atpull"%atclone" \
     sbin"tmux "\
-      @tmux/tmux
+        @tmux/tmux \
+    sbin"lazygit" \
+        @jesseduffield/lazygit
 
 # Plugins
 zinit wait lucid for \
