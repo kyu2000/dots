@@ -15,6 +15,7 @@ return {
           enabled = false,
         },
       },
+      lazygit = { enabled = true },
       picker = {
         enabled = true,
         formatters = {
@@ -134,6 +135,13 @@ return {
         desc = "Find Git Files",
       },
       -- git
+      {
+        "<leader>gg",
+        function()
+          Snacks.lazygit()
+        end,
+        desc = "Lazygit",
+      },
       {
         "<leader>gb",
         function()
