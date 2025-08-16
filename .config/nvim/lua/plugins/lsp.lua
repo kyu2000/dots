@@ -17,7 +17,7 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
-    config = function()
+    init = function()
       vim.lsp.config("*", {
         capabilities = {
           textDocument = {
