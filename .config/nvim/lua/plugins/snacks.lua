@@ -437,6 +437,22 @@ return {
               end,
             })
             :map("<leader>ud")
+          Snacks.toggle
+            .new({
+              id = "treesitter_context",
+              name = "Treesitter context",
+              get = function()
+                return require("treesitter-context").enabled()
+              end,
+              set = function(state)
+                if state then
+                  require("treesitter-context").enable()
+                else
+                  require("treesitter-context").disable()
+                end
+              end,
+            })
+            :map("<leader>uc")
         end,
       })
     end,
