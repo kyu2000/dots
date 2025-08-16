@@ -364,7 +364,7 @@ return {
       },
 
       {
-        "gr",
+        "grr",
         function()
           Snacks.picker.lsp_references()
         end,
@@ -372,14 +372,14 @@ return {
         desc = "References",
       },
       {
-        "gi",
+        "gri",
         function()
           Snacks.picker.lsp_implementations()
         end,
         desc = "Goto Implementation",
       },
       {
-        "gy",
+        "grt",
         function()
           Snacks.picker.lsp_type_definitions()
         end,
