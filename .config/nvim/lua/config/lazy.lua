@@ -21,7 +21,6 @@ vim.g.maplocalleader = ","
 require("config.options")
 require("config.diagnostics")
 require("config.keymaps")
-require("config.autocmds")
 
 require("lazy").setup({
   spec = {
