@@ -424,6 +424,7 @@ return {
           Snacks.toggle.option("wrap", { name = "Wrap" }):map("<leader>uw")
           Snacks.toggle.line_number():map("<leader>ul")
           Snacks.toggle.option("relativenumber", { name = "Relative Number" }):map("<leader>uL")
+          Snacks.toggle.inlay_hints():map("<leader>uh")
           Snacks.toggle.diagnostics():map("<leader>uD")
           Snacks.toggle
             .new({
